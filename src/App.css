@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@tailwind utilities;
+@import "tailwindcss/preflight";
+
+@font-face {
+  font-family: uncut-sans;
+  src: url("/public/fonts/uncut-sans/Uncut-Sans-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: uncut-sans;
+  src: url("/public/fonts/uncut-sans/Uncut-Sans-Medium.otf");
+  font-weight: 500;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: uncut-sans;
+  src: url("/public/fonts/uncut-sans/Uncut-Sans-Semibold.otf");
+  font-weight: 600;
+  font-style: semibold;
+}
+
+@font-face {
+  font-family: uncut-sans;
+  src: url("/public/fonts/uncut-sans/Uncut-Sans-Bold.otf");
+  font-weight: 700;
+  font-style: bold;
+}
+
+body{
+  font-family: "uncut-sans";
+}
+/* .swiper-slide{
+  width:auto!important
+} */
+.swiper-pagination-bullets{
+  /* margin-left: -42%; */
+  /* margin-top: 48px!important; */
+  position: static!important;
+  text-align: left!important;
+  padding: 2vw;
+  transition: width 0.25s!important;
+  
+}
+.swiper-pagination-bullet{
+
+  width:24px!important;
+  height:8px!important;
+  border-radius: 8px!important;
+  background-color: #E7E7E7;
+}
+.swiper-pagination-bullet-active{
+  width: 56px!important;
+  transition: width 0.25s!important;
+  background-color: #DE9C00!important;
+}
+.overlay-grid{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.67%, #000000 88.29%),
+linear-gradient(0.46deg, rgba(120, 84, 0, 0.2) 0.2%, rgba(255, 204, 0, 0.2) 99.41%);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
