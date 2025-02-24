@@ -15,9 +15,7 @@ import YellowBtn from "../components/YellowBtn";
 export default function HomePage() {
   return (
     <div>
-      <header>
       <NavBar/>
-      </header>
       <Hero/>
       <BrandCarousal/>
       <Products/>

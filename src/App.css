@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @tailwind utilities;
 @import "tailwindcss/preflight";
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 @font-face {
   font-family: uncut-sans;
@@ -74,4 +76,12 @@ linear-gradient(0.46deg, rgba(120, 84, 0, 0.2) 0.2%, rgba(255, 204, 0, 0.2) 99.4
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+/* .swiper-slide{
+  width: auto!;
+} */
+.explore-text{
+  font-family: "Allura";
+  font-weight: 400;
+  font-style: normal;
 }

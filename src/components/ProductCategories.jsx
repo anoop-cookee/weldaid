@@ -8,29 +8,17 @@ import unionImg from "../assets/Union.png";
 
 export default function ProductCategories() {
   return (
-    <div className="mt-[124px]">
+    <div className="">
       <Container>
-        <div className="text-center font-bold text-[54px] lg:text-[64px] leading-[60px] lg:leading-[70px]">
+        <div className="text-center font-bold text-[44px] leading-[50px] sm:text-[54px] lg:text-[64px] sm:leading-[60px] lg:leading-[70px] bg-[url(/src/assets/bg-products.png)] pt-[124px] pb-[50px] bg-no-repeat bg-bottom bg-contain">
           <span className="relative">
             Products
-            <img
-              className="absolute top-0 left-1/2 transform -translate-x-8 -translate-y-2 w-[100px] lg:w-[111.719705926589px]"
-              src={exploreText}
-              alt=""
-            />
-            <img
-              className="-z-1 absolute sm:block hidden top-0 right-0 transform translate-x-[30%] -translate-y-5"
-              src={ellipse1}
-              alt=""
-            />
-            <img
-              className="-z-1 absolute top-0 right-0 transform -translate-x-[30%] translate-y-9"
-              src={ellipse2}
-              alt=""
-            />
+            <div
+              className="absolute top-0 left-1/2 transform -translate-x-8 -translate-y-2 w-[100px] lg:w-[111.719705926589px] explore-text text-[#DE9C00] text-5xl leading-[52px] -rotate-7"
+            >explore</div>
           </span>
         </div>
-        <div className="text-center mt-[50px] grid grid-cols-2 lg:grid-cols-12 gap-2 justify-between">
+        <div className="text-center grid grid-cols-2 lg:grid-cols-12 gap-2 justify-between">
           {productCategoriesList.map((category, index) => {
             const isSpan = index % 3 === 0 ? true : false;
             const isSpanInLg = index % 6 === 3 ? true : false;

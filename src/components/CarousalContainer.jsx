@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,13 +15,15 @@ export default function CarousalContainer({
   slidesPerView,
   autoPlay,
   spaceBetween,
+  className,
+  pagination
 }) {
   return (
     <div>
       <Swiper
         loop={true}
         spaceBetween={spaceBetween}
-        slidesPerView={slidesPerView} // This ensures that each slide has a fixed width
+        // slidesPerView={slidesPerView} // This ensures that each slide has a fixed width
         autoplay={
           autoPlay
             ? {
@@ -30,8 +32,11 @@ export default function CarousalContainer({
               }
             : false
         }
-        modules={[Autoplay]}
-        breakpoints={breakPoints} // Use breakpoints directly here
+        className={`${className&&className}`}
+        pagination = {pagination}
+        slidesPerView = "auto"
+        modules={[Autoplay, Pagination]}
+        // breakpoints={breakPoints} // Use breakpoints directly here
         observer={true}
         observeParents={true}
       >

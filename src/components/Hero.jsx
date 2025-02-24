@@ -24,20 +24,20 @@ export default function Hero() {
                 </div>
                 <div className="flex gap-[14px]">
                  <div>
-                 <img className="w-[42px]"src="http://beta.staging-servers.com/weldaid/public/assets/web/img/certificate-icon-1.webp" alt="" />
+                 <img className="h-[43px]"src="http://beta.staging-servers.com/weldaid/public/assets/web/img/certificate-icon-1.webp" alt="" />
                  </div>
                  <div>
-                 <img className="w-[73px]"src="http://beta.staging-servers.com/weldaid/public/assets/web/img/certificate-icon-2.webp" alt="" />
+                 <img className="h-[43px]"src="http://beta.staging-servers.com/weldaid/public/assets/web/img/certificate-icon-2.webp" alt="" />
                  </div>
                   <div>
-                  <img className="w-[33px]"src="http://beta.staging-servers.com/weldaid/public/assets/web/img/certificate-icon-3.webp" alt="" />
+                  <img className="h-[43px]"src="http://beta.staging-servers.com/weldaid/public/assets/web/img/certificate-icon-3.webp" alt="" />
                   </div>
                 </div>
             </div>
           </div>
           <div className="">
             <img
-              className="w-full object-top max-w-[670.63px] max-h-[670px]"
+              className="max-w-full"
               src="http://beta.staging-servers.com/weldaid/public/assets/web/img/h-ban-img.webp"
               alt=""
             />

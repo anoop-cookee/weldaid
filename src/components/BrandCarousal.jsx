@@ -33,9 +33,9 @@ export default function BrandCarousal() {
         
         spaceBetween={8}>
           {brandList.map(brand => (
-            <div className='min-w-[196px] min-h-[100px]' key={brand.id}>
-              <SwiperSlide>
-                <img className='w-[196px] h-[100px]' src={brand.logo} alt="" />
+            <div className='' key={brand.id}>
+              <SwiperSlide className='!w-auto'>
+                <img className='rounded-[16px] w-[196px]' src={brand.logo} alt="" />
               </SwiperSlide>
             </div>
           ))}

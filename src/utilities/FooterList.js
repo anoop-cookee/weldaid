@@ -1,6 +1,9 @@
 import socialIcon1 from "../assets/social-icon1.svg";
 import socialIcon2 from "../assets/social-icon2.svg";
 import socialIcon3 from "../assets/social-icon3.svg";
+import FaceBookIcon from "../components/FaceBookIcon";
+import InstaIcon from "../components/InstaIcon";
+import YouTubeIcon from "../components/YouTubeIcon";
 
 const footerList = [
   {
@@ -29,7 +32,8 @@ const footerList = [
   {
     name: "",
     type: "image",
-    list: [socialIcon1, socialIcon2, socialIcon3],
+    // list: [socialIcon1, socialIcon2, socialIcon3],
+    list: [InstaIcon, FaceBookIcon, YouTubeIcon],
     flat: true,
   },
 ];

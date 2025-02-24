@@ -29,10 +29,10 @@ export default function Footer() {
                   <div className="flex flex-col gap-5">
                     {item.name&&<div className="font-medium text-[16px] leading-[22px]">{item.name}</div>}
                     <ul className={`${item.flat?'flex-row f;ex-wrap':'flex-col'} flex gap-2`}>
-                      {item.list.map((listItem, index)=>{
+                      {item.list.map((ListItem, index)=>{
                         return <li className="font-normal text-[16px] leading-[22px] cursor-pointer opacity-[60%] hover:text-[#FFCC00]" key={index}>
-                          {item.type === "text" && listItem}
-                          {item.type === "image" && <img className="cursor-pointer hover:text-[#FFCC00]" src={listItem}></img> }
+                          {item.type === "text" && ListItem}
+                          {item.type === "image" && <div className="cursor-pointer hover:text-[#FFCC00]">{<ListItem/>}</div> }
                         </li>
                       })}
                     </ul>
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex justify-between flex-wrap items-center mt-5 py-10">
-            <div className="font-normal text-white text-[12px] leading-4 opacity-[60%]">© 2024 Weldaid Trading Establishment. All rights reserved.</div>
+            <div className="font-normal text-white text-[12px] leading-4 opacity-[40%]">© 2024 Weldaid Trading Establishment. All rights reserved.</div>
             <div>
               <img 
               onClick={()=>{window.scrollTo({

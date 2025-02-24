@@ -10,10 +10,10 @@ export default function ProductCard({ product }) {
         <img className="w-[200px] h-[150px] lg:w-[260px] lg:h-[200px] object-contain" src={product.image} alt="" />
         <img className="absolute bottom-5" src={unionImg} alt="" />
       </div>
-      <div className="font-semibold text-[18px] leading-[22px] lg:text-[24px] lg:leading-[28px]">
+      <div className="font-semibold text-[18px] line-clamp-2 leading-[22px] lg:text-[24px] lg:leading-[28px]">
         {product.title}
       </div>
-      <div className="text-[13px] leading-[13px] lg:text-[14px] lg:leading-[16px]">
+      <div className="text-[13px] leading-[13px] lg:text-[14px] lg:leading-[16px] line-clamp-3">
         {product.description}
       </div>
       <div>

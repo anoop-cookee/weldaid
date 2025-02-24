@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 import RequestBtn from "./RequestBtn";
 import NavList from "./NavList";
 import closeIcon from "../assets/close-icon.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -12,21 +12,27 @@ export default function NavBar() {
   const [showSideBar, setShowSideBar] = useState(false);
   const [scrolled, setScrolled] = useState(false)
 
-  window.addEventListener('scroll', ()=>{
+ useEffect(()=>{
+  const handleScroll = ()=>{
     if(window.scrollY > 1){
       setScrolled(true)
     }
     else{
       setScrolled(false)
     }
-  })
+  }
+  window.addEventListener('scroll', handleScroll)
+  return ()=>{
+    window.removeEventListener('scroll', handleScroll)
+  }
+ })
 
   return (
-    <div className={`${scrolled&&'shadow-2xl'} fixed w-full top-0 py-[22px] items-center bg-[#FFFFE6] z-50 transition-shadow duration-500`}>
+    <header className={`${scrolled&&'shadow-2xl'} fixed w-full top-0 py-[22px] items-center bg-[#FFFFE6] z-50 transition-shadow duration-500`}>
       <Container>
         <div className="flex flex-wrap lg:flex-nowrap justify-between">
           <h1>
-            <img width="147px" height="48.17px" src={logo} alt="" />
+            <a href="/"><img width="147px" height="48.17px" src={logo} alt="" /></a>
           </h1>
           <nav className="hidden lg:block">
             <NavList size="lg" />
@@ -45,10 +51,15 @@ export default function NavBar() {
       </Container>
 
       {/* Side Bar */}
+      {showSideBar&&
+        <div className="bg-[rgba(0,0,0,0.3)] fixed top-0 left-0 w-screen h-screen">
+
+        </div>
+      }
       <div
         className={`${
           showSideBar ? "transform translate-x-0" : "transform translate-x-full"
-        }  h-screen w-screen flex justify-end  fixed top-0 right-0 z-50 transition-transform duration-300 ease-in-out bg-[rgba(0,0,0,0.3)]`}
+        }  h-screen w-screen flex justify-end  fixed top-0 right-0 z-50 transition-transform duration-300 ease-in-out`}
       >
         <div className="h-full px-3 pt-3 bg-[#FFFFE6] w-screen max-w-md">
         <div className="flex justify-between px-3">
@@ -67,6 +78,6 @@ export default function NavBar() {
         </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
